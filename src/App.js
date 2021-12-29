@@ -45,7 +45,7 @@ function App() {
                 <p>Select Image from your computer an then click on get prediction button to get predictions for the
                     image.</p>
                 <div>
-                    <input type="file" name="upload" onChange={(e) => handleInputChange(e)}/>
+                    <input type="file" name="upload" onChange={(e) => handleInputChange(e)} accept={'image/*'}/>
                     <div className="classifyOnClick">
                         {prediction.length > 0 && prediction.map((predict, index) => (
                             <div key={index}>
