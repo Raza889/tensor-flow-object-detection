@@ -93,6 +93,7 @@ header, footer {
 
 .classifyOnClick img {
   width: 100%;
+  max-height: 400px;
 }
 .lds-ellipsis {
   display: inline-block;

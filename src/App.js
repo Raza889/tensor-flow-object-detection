@@ -13,6 +13,9 @@ function App() {
         setLoading(true)
         const model = await cocoSsd.load();
         const predictions = await model.detect(img.current);
+        if(predictions.length === 0) {
+            alert('No Predictions for this image')
+        }
         setPrediction(predictions);
         setLoading(false)
     }
@@ -60,7 +63,7 @@ function App() {
                                 }}></div>
                             </div>
                         ))}
-                        <img src={imgsrc} alt="img" height={400} ref={img}/>
+                        <img src={imgsrc} alt="img" ref={img}/>
                     </div>
                 </div>
                 {imgsrc !== '' &&
